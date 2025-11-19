@@ -1,22 +1,26 @@
-import Hero from './components/Hero';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
-import ProductCategories from './components/ProductCategories';
-import Philosophy from './components/Philosophy';
-import WhyChooseUs from './components/WhyChooseUs';
-import Newsletter from './components/Newsletter';
 import Footer from './components/Footer';
+import Home from './pages/Home';
+import Shop from './pages/Shop';
+import Skincare from './pages/Skincare';
+import ComingSoon from './pages/ComingSoon';
 
 function App() {
   return (
-    <div className="min-h-screen bg-black">
-      <Navigation />
-      <Hero />
-      <ProductCategories />
-      <Philosophy />
-      <WhyChooseUs />
-      <Newsletter />
-      <Footer />
-    </div>
+    <Router>
+      <div className="min-h-screen bg-black">
+        <Navigation />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/skincare" element={<Skincare />} />
+          <Route path="/haircare" element={<ComingSoon type="haircare" />} />
+          <Route path="/essentials" element={<ComingSoon type="essentials" />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

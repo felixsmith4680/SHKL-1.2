@@ -1,4 +1,5 @@
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Hero() {
   return (
@@ -16,7 +17,7 @@ export default function Hero() {
 
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-cream mb-6 tracking-tight leading-tight">
           CRAFT YOUR
-          <span className="block text-gold mt-2">BEST SELF</span>
+          <span className="block text-forest-light mt-2">BEST SELF</span>
         </h1>
 
         <p className="text-cream-300 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
@@ -24,13 +25,13 @@ export default function Hero() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <button className="group bg-gold hover:bg-gold-dark text-black px-8 py-4 rounded-full font-semibold tracking-wider transition-all duration-300 flex items-center gap-2">
+          <Link to="/shop" className="group bg-forest hover:bg-forest-light text-cream px-8 py-4 rounded-full font-semibold tracking-wider transition-all duration-300 flex items-center gap-2">
             SHOP NOW
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </button>
-          <button className="border-2 border-cream text-cream hover:bg-cream hover:text-black px-8 py-4 rounded-full font-semibold tracking-wider transition-all duration-300">
+          </Link>
+          <a href="#about" className="border-2 border-cream text-cream hover:bg-cream hover:text-black px-8 py-4 rounded-full font-semibold tracking-wider transition-all duration-300">
             DISCOVER MORE
-          </button>
+          </a>
         </div>
       </div>
 

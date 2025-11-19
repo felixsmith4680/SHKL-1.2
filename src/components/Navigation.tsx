@@ -1,35 +1,36 @@
 import { ShoppingCart, Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-black/60 backdrop-blur-md border-b border-forest/20">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
-          <div className="flex-shrink-0">
+    <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-6xl">
+      <div className="bg-black/30 backdrop-blur-md border border-cream/10 rounded-full px-6 lg:px-8 shadow-xl">
+        <div className="flex justify-between items-center h-16">
+          <Link to="/" className="flex-shrink-0">
             <img
               src="/SHKL footing header2.png"
               alt="SHKL"
-              className="h-16 w-auto"
+              className="h-12 w-auto"
             />
-          </div>
+          </Link>
 
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#shop" className="text-cream hover:text-gold transition-colors duration-300 text-sm font-medium tracking-wider">
+            <Link to="/shop" className="text-cream hover:text-forest-light transition-colors duration-300 text-sm font-medium tracking-wider">
               SHOP
-            </a>
-            <a href="#skincare" className="text-cream hover:text-gold transition-colors duration-300 text-sm font-medium tracking-wider">
+            </Link>
+            <Link to="/skincare" className="text-cream hover:text-forest-light transition-colors duration-300 text-sm font-medium tracking-wider">
               SKINCARE
-            </a>
-            <a href="#haircare" className="text-cream hover:text-gold transition-colors duration-300 text-sm font-medium tracking-wider">
+            </Link>
+            <Link to="/haircare" className="text-cream hover:text-forest-light transition-colors duration-300 text-sm font-medium tracking-wider">
               HAIRCARE
-            </a>
-            <a href="#about" className="text-cream hover:text-gold transition-colors duration-300 text-sm font-medium tracking-wider">
+            </Link>
+            <a href="/#about" className="text-cream hover:text-forest-light transition-colors duration-300 text-sm font-medium tracking-wider">
               ABOUT
             </a>
-            <button className="text-cream hover:text-gold transition-colors duration-300">
+            <button className="text-cream hover:text-forest-light transition-colors duration-300">
               <ShoppingCart className="w-5 h-5" />
             </button>
           </div>
@@ -44,18 +45,18 @@ export default function Navigation() {
       </div>
 
       {isMenuOpen && (
-        <div className="md:hidden bg-black/80 backdrop-blur-md border-t border-forest/20">
+        <div className="md:hidden bg-black/50 backdrop-blur-md border-t border-cream/10 rounded-b-3xl mt-2">
           <div className="px-6 py-4 space-y-4">
-            <a href="#shop" className="block text-cream hover:text-gold transition-colors duration-300 text-sm font-medium tracking-wider">
+            <Link to="/shop" className="block text-cream hover:text-forest-light transition-colors duration-300 text-sm font-medium tracking-wider" onClick={() => setIsMenuOpen(false)}>
               SHOP
-            </a>
-            <a href="#skincare" className="block text-cream hover:text-gold transition-colors duration-300 text-sm font-medium tracking-wider">
+            </Link>
+            <Link to="/skincare" className="block text-cream hover:text-forest-light transition-colors duration-300 text-sm font-medium tracking-wider" onClick={() => setIsMenuOpen(false)}>
               SKINCARE
-            </a>
-            <a href="#haircare" className="block text-cream hover:text-gold transition-colors duration-300 text-sm font-medium tracking-wider">
+            </Link>
+            <Link to="/haircare" className="block text-cream hover:text-forest-light transition-colors duration-300 text-sm font-medium tracking-wider" onClick={() => setIsMenuOpen(false)}>
               HAIRCARE
-            </a>
-            <a href="#about" className="block text-cream hover:text-gold transition-colors duration-300 text-sm font-medium tracking-wider">
+            </Link>
+            <a href="/#about" className="block text-cream hover:text-forest-light transition-colors duration-300 text-sm font-medium tracking-wider" onClick={() => setIsMenuOpen(false)}>
               ABOUT
             </a>
           </div>

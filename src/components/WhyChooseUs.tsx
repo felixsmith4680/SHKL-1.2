@@ -31,7 +31,7 @@ export default function WhyChooseUs() {
           <h2 className="text-3xl md:text-5xl font-bold text-cream mb-4 tracking-tight">
             WHY CHOOSE SHKL
           </h2>
-          <div className="w-24 h-1 bg-gold mx-auto mb-6"></div>
+          <div className="w-24 h-1 bg-forest mx-auto mb-6"></div>
           <p className="text-cream-300 text-lg max-w-3xl mx-auto leading-relaxed">
             At SHKL, we believe beauty should be natural, effective, and accessible to everyone. Our commitment to excellence drives everything we do.
           </p>
@@ -41,11 +41,11 @@ export default function WhyChooseUs() {
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="bg-gradient-to-br from-charcoal/30 to-transparent border border-forest/30 p-8 hover:border-gold/50 transition-all duration-500 rounded-2xl"
+              className="bg-gradient-to-br from-charcoal/30 to-transparent border border-gold/30 p-8 hover:border-forest/50 transition-all duration-500 rounded-2xl"
             >
               <div className="flex items-start gap-6">
-                <div className="flex-shrink-0 p-3 bg-forest/20 rounded-full">
-                  <feature.icon className="w-8 h-8 text-forest" />
+                <div className="flex-shrink-0 p-3 bg-gold/20 rounded-full">
+                  <feature.icon className="w-8 h-8 text-gold" />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-cream mb-3 tracking-wider">
