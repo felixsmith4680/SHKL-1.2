@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
         cream: {
+          DEFAULT: '#F0EAD6',
           50: '#FDFBF7',
           100: '#FAF6F0',
           200: '#F5EDE3',
@@ -14,10 +15,16 @@ export default {
           600: '#C9B299',
           700: '#B39B80',
         },
-        bronze: {
-          400: '#CD9777',
-          500: '#B8866B',
-          600: '#A67659',
+        forest: {
+          DEFAULT: '#2D5016',
+          light: '#3d6b1f',
+        },
+        gold: {
+          DEFAULT: '#B8860B',
+          dark: '#9A7209',
+        },
+        charcoal: {
+          DEFAULT: '#333333',
         },
       },
     },
